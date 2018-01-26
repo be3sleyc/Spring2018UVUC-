@@ -48,7 +48,7 @@
             // 
             this.btnWelcome.AutoSize = true;
             this.btnWelcome.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnWelcome.Location = new System.Drawing.Point(12, 57);
+            this.btnWelcome.Location = new System.Drawing.Point(197, 158);
             this.btnWelcome.Name = "btnWelcome";
             this.btnWelcome.Size = new System.Drawing.Size(75, 27);
             this.btnWelcome.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.btnClose.AutoSize = true;
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnClose.Location = new System.Drawing.Point(196, 57);
+            this.btnClose.Location = new System.Drawing.Point(69, 105);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 27);
             this.btnClose.TabIndex = 1;
@@ -72,9 +72,9 @@
             // 
             this.btnStudentProfile.AutoSize = true;
             this.btnStudentProfile.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnStudentProfile.Location = new System.Drawing.Point(88, 57);
+            this.btnStudentProfile.Location = new System.Drawing.Point(69, 57);
             this.btnStudentProfile.Name = "btnStudentProfile";
-            this.btnStudentProfile.Size = new System.Drawing.Size(107, 27);
+            this.btnStudentProfile.Size = new System.Drawing.Size(111, 29);
             this.btnStudentProfile.TabIndex = 2;
             this.btnStudentProfile.Text = "Student Profile";
             this.btnStudentProfile.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 93);
+            this.ClientSize = new System.Drawing.Size(284, 197);
             this.Controls.Add(this.btnStudentProfile);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnWelcome);
