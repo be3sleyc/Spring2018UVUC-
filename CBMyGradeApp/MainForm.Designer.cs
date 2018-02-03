@@ -51,7 +51,7 @@
             this.btnWelcome.Location = new System.Drawing.Point(197, 158);
             this.btnWelcome.Name = "btnWelcome";
             this.btnWelcome.Size = new System.Drawing.Size(75, 27);
-            this.btnWelcome.TabIndex = 2;
+            this.btnWelcome.TabIndex = 1;
             this.btnWelcome.Text = "Welcome";
             this.btnWelcome.UseVisualStyleBackColor = true;
             this.btnWelcome.Click += new System.EventHandler(this.btnWelcome_Click);
@@ -63,7 +63,7 @@
             this.btnClose.Location = new System.Drawing.Point(69, 105);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 27);
-            this.btnClose.TabIndex = 1;
+            this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
