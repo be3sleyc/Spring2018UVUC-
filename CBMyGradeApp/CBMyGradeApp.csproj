@@ -53,6 +53,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScoringMethodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoringMethodsForm.Designer.cs">
+      <DependentUpon>ScoringMethodsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ScoringMethodsForm.resx">
+      <DependentUpon>ScoringMethodsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentProfileForm.resx">
       <DependentUpon>StudentProfileForm.cs</DependentUpon>
     </EmbeddedResource>
