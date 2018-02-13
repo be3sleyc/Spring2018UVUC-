@@ -39,8 +39,8 @@
             this.btnCloseStudentProfForm = new System.Windows.Forms.Button();
             this.grpBoxStudentInfo = new System.Windows.Forms.GroupBox();
             this.grpBoxAcademicInfo = new System.Windows.Forms.GroupBox();
-            this.txtBoxYear = new System.Windows.Forms.TextBox();
             this.lblYear = new System.Windows.Forms.Label();
+            this.txtBoxYear = new System.Windows.Forms.TextBox();
             this.picBoxProfile2 = new System.Windows.Forms.PictureBox();
             this.picBoxProfile1 = new System.Windows.Forms.PictureBox();
             this.btnShowProfile1 = new System.Windows.Forms.Button();
@@ -172,14 +172,6 @@
             this.grpBoxAcademicInfo.TabStop = false;
             this.grpBoxAcademicInfo.Text = "Academic Info";
             // 
-            // txtBoxYear
-            // 
-            this.txtBoxYear.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtBoxYear.Location = new System.Drawing.Point(146, 88);
-            this.txtBoxYear.Name = "txtBoxYear";
-            this.txtBoxYear.Size = new System.Drawing.Size(163, 24);
-            this.txtBoxYear.TabIndex = 1;
-            // 
             // lblYear
             // 
             this.lblYear.AutoSize = true;
@@ -190,6 +182,14 @@
             this.lblYear.TabIndex = 2;
             this.lblYear.Text = "Year";
             this.lblYear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtBoxYear
+            // 
+            this.txtBoxYear.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtBoxYear.Location = new System.Drawing.Point(146, 88);
+            this.txtBoxYear.Name = "txtBoxYear";
+            this.txtBoxYear.Size = new System.Drawing.Size(163, 24);
+            this.txtBoxYear.TabIndex = 1;
             // 
             // picBoxProfile2
             // 

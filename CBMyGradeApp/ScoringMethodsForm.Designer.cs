@@ -49,12 +49,12 @@
             this.txtBoxAssignment2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.lblWeighted = new System.Windows.Forms.Label();
             this.lblCumulative = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -257,18 +257,6 @@
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.Calculate_Click);
             // 
-            // btnClear
-            // 
-            this.btnClear.AutoSize = true;
-            this.btnClear.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.btnClear.Location = new System.Drawing.Point(308, 116);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 29);
-            this.btnClear.TabIndex = 7;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
             // btnClose
             // 
             this.btnClose.AutoSize = true;
@@ -310,6 +298,7 @@
             this.lblWeighted.Name = "lblWeighted";
             this.lblWeighted.Size = new System.Drawing.Size(141, 35);
             this.lblWeighted.TabIndex = 11;
+            this.lblWeighted.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCumulative
             // 
@@ -320,20 +309,31 @@
             this.lblCumulative.Name = "lblCumulative";
             this.lblCumulative.Size = new System.Drawing.Size(141, 35);
             this.lblCumulative.TabIndex = 11;
+            this.lblCumulative.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnClear
+            // 
+            this.btnClear.AutoSize = true;
+            this.btnClear.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(308, 116);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 29);
+            this.btnClear.TabIndex = 7;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // ScoringMethodsForm
             // 
-            this.AcceptButton = this.btnCalculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnClear;
             this.ClientSize = new System.Drawing.Size(406, 321);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.lblCumulative);
             this.Controls.Add(this.lblWeighted);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtBoxAssignment2);
@@ -385,11 +385,11 @@
         private System.Windows.Forms.TextBox txtBoxAssignment2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblWeighted;
         private System.Windows.Forms.Label lblCumulative;
+        private System.Windows.Forms.Button btnClear;
     }
 }

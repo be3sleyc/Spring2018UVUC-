@@ -92,33 +92,6 @@ namespace CBMyGradeApp
         }
 
         /// <summary>
-        /// Clears the form's text boxes and calculated score labels nd returns focus to the first (project 1) text box
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            // clear all the 2 project text boxes
-            txtBoxProject1.Clear();
-            txtBoxProject2.Clear();
-
-            // clear all the 2 exam text boxes
-            txtBoxExam1.Clear();
-            txtBoxExam2.Clear();
-
-            // clear all the 2 assignment text boxes
-            txtBoxAssignment1.Clear();
-            txtBoxAssignment2.Clear();
-
-            // clear the calculated score labels
-            lblWeighted.Text = "";
-            lblCumulative.Text = "";
-
-            // give back focus
-            txtBoxProject1.Focus();
-        }
-
-        /// <summary>
         /// Closes the form
         /// </summary>
         /// <param name="sender"></param>
@@ -127,6 +100,26 @@ namespace CBMyGradeApp
         {
             // Close the form
             this.Close();
+        }
+
+        /// <summary>
+        /// Clear the input textboxes and output labels
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            // clear the score input text boxes
+            txtBoxAssignment1.Clear();
+            txtBoxAssignment2.Clear();
+            txtBoxExam1.Clear();
+            txtBoxExam2.Clear();
+            txtBoxProject1.Clear();
+            txtBoxProject2.Clear();
+
+            // clear the result labels
+            lblWeighted.Text = "";
+            lblCumulative.Text = "";
         }
     }
 }
