@@ -2,12 +2,13 @@
 //Class: INFO 1200
 //Section: 001
 //Professor: Crandall
-//Date: 20180210
-//Project #: 3A
+//Date: 20180216
+//Project #: 4A
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
 // if I am found in violation of this policy.
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +36,7 @@ namespace CBMyGradeApp
         private void btnWelcome_Click(object sender, EventArgs e)
         {
             // summon messagebox and display a welcome message
-            MessageBox.Show("Welcome to Project 3.A!", "Welcome!");
+            MessageBox.Show("Welcome to Project 4.A!", "Welcome!");
         }
 
         /// <summary>
@@ -64,9 +65,9 @@ namespace CBMyGradeApp
 
         private void btnScoringMethods_Click(object sender, EventArgs e)
         {
+            // calls the form’s constructor. Must match the form class name exactly
             ScoringMethodsForm scoringMethods = new ScoringMethodsForm();
-            // calls the form’s constructor. 
-            // must match the form class name exactly
+            
             scoringMethods.ShowDialog();    //  shows the form as a dialog
         }
     }

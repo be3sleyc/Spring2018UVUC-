@@ -253,7 +253,7 @@
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(82, 29);
             this.btnCalculate.TabIndex = 6;
-            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.Text = "C&alculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.Calculate_Click);
             // 
@@ -265,19 +265,20 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 29);
             this.btnClear.TabIndex = 7;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "Cl&ear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnClose
             // 
             this.btnClose.AutoSize = true;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(308, 168);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 29);
             this.btnClose.TabIndex = 8;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "Clo&se";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -303,7 +304,7 @@
             // 
             // lblWeighted
             // 
-            this.lblWeighted.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblWeighted.BackColor = System.Drawing.Color.Silver;
             this.lblWeighted.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblWeighted.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeighted.Location = new System.Drawing.Point(29, 274);
@@ -313,7 +314,7 @@
             // 
             // lblCumulative
             // 
-            this.lblCumulative.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblCumulative.BackColor = System.Drawing.Color.Silver;
             this.lblCumulative.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCumulative.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCumulative.Location = new System.Drawing.Point(221, 274);
@@ -326,7 +327,8 @@
             this.AcceptButton = this.btnCalculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnClear;
+            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(406, 321);
             this.Controls.Add(this.lblCumulative);
             this.Controls.Add(this.lblWeighted);

@@ -49,10 +49,10 @@
             // 
             this.btnWelcome.AutoSize = true;
             this.btnWelcome.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnWelcome.Location = new System.Drawing.Point(197, 158);
+            this.btnWelcome.Location = new System.Drawing.Point(94, 47);
             this.btnWelcome.Name = "btnWelcome";
             this.btnWelcome.Size = new System.Drawing.Size(75, 27);
-            this.btnWelcome.TabIndex = 1;
+            this.btnWelcome.TabIndex = 0;
             this.btnWelcome.Text = "Welcome";
             this.btnWelcome.UseVisualStyleBackColor = true;
             this.btnWelcome.Click += new System.EventHandler(this.btnWelcome_Click);
@@ -61,10 +61,10 @@
             // 
             this.btnClose.AutoSize = true;
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnClose.Location = new System.Drawing.Point(69, 125);
+            this.btnClose.Location = new System.Drawing.Point(197, 158);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 27);
-            this.btnClose.TabIndex = 2;
+            this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -73,10 +73,10 @@
             // 
             this.btnStudentProfile.AutoSize = true;
             this.btnStudentProfile.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnStudentProfile.Location = new System.Drawing.Point(69, 57);
+            this.btnStudentProfile.Location = new System.Drawing.Point(76, 79);
             this.btnStudentProfile.Name = "btnStudentProfile";
             this.btnStudentProfile.Size = new System.Drawing.Size(111, 29);
-            this.btnStudentProfile.TabIndex = 0;
+            this.btnStudentProfile.TabIndex = 1;
             this.btnStudentProfile.Text = "Student Profile";
             this.btnStudentProfile.UseVisualStyleBackColor = true;
             this.btnStudentProfile.Click += new System.EventHandler(this.btnStudentProfile_Click);
@@ -85,10 +85,10 @@
             // 
             this.btnScoringMethods.AutoSize = true;
             this.btnScoringMethods.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnScoringMethods.Location = new System.Drawing.Point(69, 91);
+            this.btnScoringMethods.Location = new System.Drawing.Point(71, 113);
             this.btnScoringMethods.Name = "btnScoringMethods";
             this.btnScoringMethods.Size = new System.Drawing.Size(120, 29);
-            this.btnScoringMethods.TabIndex = 0;
+            this.btnScoringMethods.TabIndex = 2;
             this.btnScoringMethods.Text = "Scoring Methods";
             this.btnScoringMethods.UseVisualStyleBackColor = true;
             this.btnScoringMethods.Click += new System.EventHandler(this.btnScoringMethods_Click);
