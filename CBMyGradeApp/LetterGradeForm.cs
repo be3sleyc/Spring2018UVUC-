@@ -41,7 +41,9 @@ namespace CBMyGradeApp
             string letterGrade;
 
             // validate the assignment scores in order: project, quiz, and exam
-            // if neither the try parse succeeds nor the score is in the proper range, display the error message, clear the input text box, and refocus on it
+            // for each of the assignments: 
+            // if neither the try parse succeeds nor the score is in the proper range, 
+            // display the error message, clear the input text box, and refocus on it
             if (!(int.TryParse(txtBoxProject1Score.Text, out project1Score) && (project1Score <= MAX_PROJECT && project1Score >= MIN_SCORE)))
             {
                 MessageBox.Show($"Please enter a valid grade between {MIN_SCORE} and {MAX_PROJECT}.", "Problem with Project 1 Score");
@@ -60,8 +62,39 @@ namespace CBMyGradeApp
                 txtBoxExam1Score.Clear();
                 txtBoxExam1Score.Focus();
             }
+            else
+            {
+                // every input is valid, calculate cumulative (total) grade
+                gradeTotal = (double) (project1Score + quiz1Score + exam1Score) / (MAX_PROJECT + MAX_QUIZ + MAX_EXAM);
 
+                // calculate letter grade using class syllabus information and grade total
+                if (gradeTotal >= 0.94) // 94 +	    A
+                    letterGrade = "A";
+                else if (gradeTotal >= 0.90) // 90-93	A-
+                    letterGrade = "A-";
+                else if (gradeTotal >= 0.87) // 87-89	B+
+                    letterGrade = "B+";
+                else if (gradeTotal >= 0.83) // 83-86	B
+                    letterGrade = "B";
+                else if (gradeTotal >= 0.80) // 80-82	B-
+                    letterGrade = "B-";
+                else if (gradeTotal >= 0.77) // 77-79	C+
+                    letterGrade = "C+";
+                else if (gradeTotal >= 0.73) // 73-76	C
+                    letterGrade = "C";
+                else if (gradeTotal >= 0.70) // 70 - 72    C -
+                    letterGrade = "C-";
+                else if (gradeTotal >= 0.67) // 67 - 69    D +
+                    letterGrade = "D+";
+                else if (gradeTotal >= 0.63) // 63 - 66    D
+                    letterGrade = "D";
+                else if (gradeTotal >= 0.60) // 60 - 62    D -
+                    letterGrade = "D-";
+                else // less than 60    E
+                    letterGrade = "E";
 
+                lblGradeReport.Text = $"This grade is: {gradeTotal.ToString("p2")} for a letter grade of {letterGrade}";
+            }
         }
 
         /// <summary>
@@ -78,6 +111,9 @@ namespace CBMyGradeApp
 
             // clear the result label
             lblGradeReport.Text = "";
+
+            // set focus on project 1 text box
+            txtBoxProject1Score.Focus();
         }
 
         /// <summary>
