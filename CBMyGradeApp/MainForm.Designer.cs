@@ -34,6 +34,7 @@
             this.btnStudentProfile = new System.Windows.Forms.Button();
             this.btnScoringMethods = new System.Windows.Forms.Button();
             this.btnLetterGrade = new System.Windows.Forms.Button();
+            this.btnQuizTimer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblName
@@ -49,10 +50,10 @@
             // btnWelcome
             // 
             this.btnWelcome.AutoSize = true;
-            this.btnWelcome.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnWelcome.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWelcome.Location = new System.Drawing.Point(38, 49);
             this.btnWelcome.Name = "btnWelcome";
-            this.btnWelcome.Size = new System.Drawing.Size(75, 27);
+            this.btnWelcome.Size = new System.Drawing.Size(83, 29);
             this.btnWelcome.TabIndex = 0;
             this.btnWelcome.Text = "Welcome";
             this.btnWelcome.UseVisualStyleBackColor = true;
@@ -61,11 +62,11 @@
             // btnClose
             // 
             this.btnClose.AutoSize = true;
-            this.btnClose.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnClose.Location = new System.Drawing.Point(231, 155);
+            this.btnClose.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(211, 214);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 27);
-            this.btnClose.TabIndex = 4;
+            this.btnClose.Size = new System.Drawing.Size(75, 29);
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -73,10 +74,10 @@
             // btnStudentProfile
             // 
             this.btnStudentProfile.AutoSize = true;
-            this.btnStudentProfile.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnStudentProfile.Location = new System.Drawing.Point(151, 49);
+            this.btnStudentProfile.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudentProfile.Location = new System.Drawing.Point(38, 106);
             this.btnStudentProfile.Name = "btnStudentProfile";
-            this.btnStudentProfile.Size = new System.Drawing.Size(111, 29);
+            this.btnStudentProfile.Size = new System.Drawing.Size(123, 29);
             this.btnStudentProfile.TabIndex = 1;
             this.btnStudentProfile.Text = "Student Profile";
             this.btnStudentProfile.UseVisualStyleBackColor = true;
@@ -85,11 +86,11 @@
             // btnScoringMethods
             // 
             this.btnScoringMethods.AutoSize = true;
-            this.btnScoringMethods.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnScoringMethods.Location = new System.Drawing.Point(38, 98);
+            this.btnScoringMethods.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScoringMethods.Location = new System.Drawing.Point(150, 165);
             this.btnScoringMethods.Name = "btnScoringMethods";
-            this.btnScoringMethods.Size = new System.Drawing.Size(120, 29);
-            this.btnScoringMethods.TabIndex = 2;
+            this.btnScoringMethods.Size = new System.Drawing.Size(136, 29);
+            this.btnScoringMethods.TabIndex = 4;
             this.btnScoringMethods.Text = "Scoring Methods";
             this.btnScoringMethods.UseVisualStyleBackColor = true;
             this.btnScoringMethods.Click += new System.EventHandler(this.btnScoringMethods_Click);
@@ -97,26 +98,39 @@
             // btnLetterGrade
             // 
             this.btnLetterGrade.AutoSize = true;
-            this.btnLetterGrade.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnLetterGrade.Location = new System.Drawing.Point(168, 98);
+            this.btnLetterGrade.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLetterGrade.Location = new System.Drawing.Point(38, 165);
             this.btnLetterGrade.Name = "btnLetterGrade";
-            this.btnLetterGrade.Size = new System.Drawing.Size(94, 29);
+            this.btnLetterGrade.Size = new System.Drawing.Size(106, 29);
             this.btnLetterGrade.TabIndex = 3;
             this.btnLetterGrade.Text = "Letter Grade";
             this.btnLetterGrade.UseVisualStyleBackColor = true;
             this.btnLetterGrade.Click += new System.EventHandler(this.btnLetterGrade_Click);
             // 
+            // btnQuizTimer
+            // 
+            this.btnQuizTimer.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuizTimer.Location = new System.Drawing.Point(167, 106);
+            this.btnQuizTimer.Name = "btnQuizTimer";
+            this.btnQuizTimer.Size = new System.Drawing.Size(119, 29);
+            this.btnQuizTimer.TabIndex = 2;
+            this.btnQuizTimer.Text = "Quiz Timer";
+            this.btnQuizTimer.UseVisualStyleBackColor = true;
+            this.btnQuizTimer.Click += new System.EventHandler(this.btnQuizTimer_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 194);
+            this.ClientSize = new System.Drawing.Size(319, 255);
+            this.Controls.Add(this.btnQuizTimer);
             this.Controls.Add(this.btnLetterGrade);
             this.Controls.Add(this.btnScoringMethods);
             this.Controls.Add(this.btnStudentProfile);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnWelcome);
             this.Controls.Add(this.lblName);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "MainForm";
             this.Text = "My Grade App";
             this.ResumeLayout(false);
@@ -132,6 +146,7 @@
         private System.Windows.Forms.Button btnStudentProfile;
         private System.Windows.Forms.Button btnScoringMethods;
         private System.Windows.Forms.Button btnLetterGrade;
+        private System.Windows.Forms.Button btnQuizTimer;
     }
 }
 

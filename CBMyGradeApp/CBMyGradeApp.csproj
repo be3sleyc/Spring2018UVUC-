@@ -93,6 +93,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuizTimerForm.resx">
+      <DependentUpon>QuizTimerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ScoringMethodsForm.resx">
       <DependentUpon>ScoringMethodsForm.cs</DependentUpon>
     </EmbeddedResource>

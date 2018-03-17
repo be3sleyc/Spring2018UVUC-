@@ -16,16 +16,129 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
+using System.Media;
 using System.Windows.Forms;
 
 namespace CBMyGradeApp
 {
     public partial class QuizTimerForm : Form
     {
+        // declare field constants to keep track of beep count and Sleep time
+        private const int BEEP = 3;
+        private const int SLEEP = 1000; // 1000 milliseconds for 1 second
+        private const int TIME_MAX = 3600; // limit to 1 hour
+        private const int TIME_MIN = 0;
+
         public QuizTimerForm()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Validates user input and starts the timer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            // create a variable for user time input
+            int time = 0;
+
+            // validate the user input
+            if (InputIsValid(out time))
+            {
+                // Check the radio buttons
+                if (rBtnCountD.Checked)
+                {
+                    // count down from time
+                    for (int i = time; i >= 0; i--)
+                        UpdateTimer(i); // call to UpdateTimer method
+                }
+                else
+                {
+                    // count up from zero
+                    for (int i = 0; i <= time; i++)
+                        UpdateTimer(i); // call to UpdateTimer method
+                }
+
+                // Beep when done
+                if (chkBoxAlarm.Checked)
+                {
+                    for (int i = 0; i < BEEP; i++)
+                    {
+                        // Beep
+                        SystemSounds.Beep.Play();
+
+                        Thread.Sleep(SLEEP / 4); // pauses the program for quarter of sleep time
+                        Application.DoEvents(); // redraws the GUI
+                    }
+                }
+            }
+            else
+            {
+                // explain the validation error, clear and re-focus on the text box.
+                MessageBox.Show("Timer value must be a value of seconds greater than 0 and less than 1 hour (3600 seconds). Please enter a new value.", "Invalid Input");
+                txtBoxTimerVal.Clear();
+                txtBoxTimerVal.Focus();
+            }
+
+            // clear out all i/o controls before exiting handler method
+            lblTimer.Text = "00:00";
+            txtBoxTimerVal.Clear();
+            txtBoxTimerVal.Focus(); // re-focus on text box.
+
+        }
+
+        /// <summary>
+        /// Validates user input and returns true if successful
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        private bool InputIsValid(out int time)
+        {
+            // try to parse the time value to an int variable
+            if (int.TryParse(txtBoxTimerVal.Text, out time))
+            {
+                // check that it meets minimum and maximum value requirements
+                if (time < TIME_MAX && time > TIME_MIN)
+                {
+                    return true;
+                }
+            }
+
+            // haven't returned true, so must be false
+            return false;
+        }
+
+        /// <summary>
+        /// uses a tick value to set a timer label, then sleeps
+        /// </summary>
+        /// <param name="tick"></param>
+        private void UpdateTimer(int tick)
+        {
+            // create a time span object to pace the timer
+            TimeSpan currentTime = new TimeSpan(0, 0, tick);
+
+            // display the current time to the timer label
+            lblTimer.Text = currentTime.ToString(@"mm\:ss");
+
+            Thread.Sleep(SLEEP); // count a second
+            Application.DoEvents(); // redraws the GUI
+        }
+
+        /// <summary>
+        /// Closes the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            // catch any sleeping threads
+            this.Refresh();
+
+            // close this form
+            this.Close();
         }
     }
 }

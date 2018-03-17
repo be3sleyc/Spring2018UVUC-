@@ -60,7 +60,7 @@ namespace CBMyGradeApp
             // calls the form’s constructor. Must match the form name exactly
             StudentProfileForm studentProfile = new StudentProfileForm();
 
-            studentProfile.ShowDialog();    //  shows the form as a dialog
+            studentProfile.ShowDialog(); // shows the form as a dialog
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace CBMyGradeApp
             // calls the form’s constructor. Must match the form class name exactly
             ScoringMethodsForm scoringMethods = new ScoringMethodsForm();
 
-            scoringMethods.ShowDialog();    //  shows the form as a dialog
+            scoringMethods.ShowDialog(); // shows the form as a dialog
         }
 
         /// <summary>
@@ -86,7 +86,20 @@ namespace CBMyGradeApp
             // calls the form’s constructor. must match the form class name exactly
             LetterGradeForm letterGrade = new LetterGradeForm();
 
-            letterGrade.ShowDialog();    // shows the form as a dialog
+            letterGrade.ShowDialog(); // shows the form as a dialog
+
+        }
+
+        /// <summary>
+        /// Opens the quiz timer form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnQuizTimer_Click(object sender, EventArgs e)
+        {
+            // calls the form’s constructor. must match the form class name exactly
+            QuizTimerForm quizTimer = new QuizTimerForm();
+            quizTimer.Show(); // shows the form as a modeless dialog
 
         }
     }
