@@ -24,11 +24,9 @@ namespace CBMyGradeApp
 {
     public partial class QuizTimerForm : Form
     {
-        // declare field constants to keep track of beep count and Sleep time
-        private const int BEEP = 3;
-        private const int SLEEP = 1000; // 1000 milliseconds for 1 second
-        private const int TIME_MAX = 3600; // limit to 1 hour
-        private const int TIME_MIN = 0;
+        // declare field constants to keep track of beep count, Sleep time, and min/ max timer limits
+        private const int BEEP = 3, SLEEP = 1000; // 1000 milliseconds for 1 second
+        private const int TIME_MIN = 0, TIME_MAX = 3600; // limit max to 1 hour
 
         public QuizTimerForm()
         {
@@ -70,7 +68,7 @@ namespace CBMyGradeApp
                         // Beep
                         SystemSounds.Beep.Play();
 
-                        Thread.Sleep(SLEEP / 4); // pauses the program for quarter of sleep time
+                        Thread.Sleep(SLEEP / 3); // pauses the program for a third of sleep time
                         Application.DoEvents(); // redraws the GUI
                     }
                 }
@@ -78,7 +76,7 @@ namespace CBMyGradeApp
             else
             {
                 // explain the validation error, clear and re-focus on the text box.
-                MessageBox.Show("Timer value must be a value of seconds greater than 0 and less than 1 hour (3600 seconds). Please enter a new value.", "Invalid Input");
+                MessageBox.Show($"Timer value must be a value of seconds greater than {TIME_MIN} and less than {TIME_MAX} seconds. Please enter a new value.", "Invalid Input");
                 txtBoxTimerVal.Clear();
                 txtBoxTimerVal.Focus();
             }
@@ -112,7 +110,7 @@ namespace CBMyGradeApp
         }
 
         /// <summary>
-        /// uses a tick value to set a timer label, then sleeps
+        /// uses a tick value to increment or decrement a timer label, then sleeps
         /// </summary>
         /// <param name="tick"></param>
         private void UpdateTimer(int tick)
