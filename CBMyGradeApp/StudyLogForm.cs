@@ -48,7 +48,7 @@ namespace CBMyGradeApp
             lblToday.Text = currentDate;
 
             // modify the currentFileName to hold the date + studylog.txt
-            currentFilename = currentDate.Replace("/", "_") + "studylog.txt";
+            currentFilename = currentDate.Replace("/", "_") + "studylog" + ".txt";
 
             // declare a stream reader to read in the study log from text files
             StreamReader inputFile;
@@ -81,7 +81,7 @@ namespace CBMyGradeApp
             catch (Exception)
             {
                 // if an exception occurs, display an error message
-                MessageBox.Show("Unable to read from file.\nPlease Check your persmissions.", "Reading from File Error");
+                MessageBox.Show("Unable to read from file.\nIf this in not the first run, please check your persmissions.", "Reading from File Error");
             }
         }
 
@@ -99,9 +99,9 @@ namespace CBMyGradeApp
             if (int.TryParse(txtBoxDuration.Text, out dur) && dur > 0)
             {
                 // add the concatenation of the selected course, the value of duration, and notes text boxes
-                lstBoxStudyEntries.Items.Add(lstBoxCourses.SelectedItem.ToString() + " " +
-                    txtBoxDuration.Text + "minutes " +
-                    txtBoxNotes.Text);
+                lstBoxStudyEntries.Items.Add("Course: "+ lstBoxCourses.SelectedItem.ToString() + " " +
+                    " Duration: " + txtBoxDuration.Text + " mins. " +
+                    "Notes: " + txtBoxNotes.Text);
 
                 // Clear all the users input and set the course selection to the first item
                 txtBoxDuration.Clear();
@@ -139,7 +139,7 @@ namespace CBMyGradeApp
             try
             {
                 // loop through the study entries list box items and write them to file
-                for (int i = 0; i <= entryCount; i++)
+                for (int i = 0; i < entryCount; i++)
                 {
                     outfile.WriteLine(lstBoxStudyEntries.Items[i]);
                 }

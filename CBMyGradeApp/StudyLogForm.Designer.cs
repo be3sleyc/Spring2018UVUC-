@@ -125,7 +125,7 @@
             this.grpBoxWrite.Controls.Add(this.label5);
             this.grpBoxWrite.Location = new System.Drawing.Point(5, 3);
             this.grpBoxWrite.Name = "grpBoxWrite";
-            this.grpBoxWrite.Size = new System.Drawing.Size(409, 216);
+            this.grpBoxWrite.Size = new System.Drawing.Size(409, 243);
             this.grpBoxWrite.TabIndex = 2;
             this.grpBoxWrite.TabStop = false;
             // 
@@ -143,8 +143,9 @@
             // txtBoxNotes
             // 
             this.txtBoxNotes.Location = new System.Drawing.Point(16, 176);
+            this.txtBoxNotes.Multiline = true;
             this.txtBoxNotes.Name = "txtBoxNotes";
-            this.txtBoxNotes.Size = new System.Drawing.Size(215, 27);
+            this.txtBoxNotes.Size = new System.Drawing.Size(215, 61);
             this.txtBoxNotes.TabIndex = 4;
             // 
             // txtBoxDuration
@@ -174,7 +175,7 @@
             this.grpBoxRead.Controls.Add(this.btnSaveLog);
             this.grpBoxRead.Controls.Add(this.lstBoxStudyEntries);
             this.grpBoxRead.Controls.Add(this.label3);
-            this.grpBoxRead.Location = new System.Drawing.Point(5, 225);
+            this.grpBoxRead.Location = new System.Drawing.Point(5, 252);
             this.grpBoxRead.Name = "grpBoxRead";
             this.grpBoxRead.Size = new System.Drawing.Size(409, 232);
             this.grpBoxRead.TabIndex = 3;
@@ -204,18 +205,20 @@
             // 
             // lstBoxStudyEntries
             // 
+            this.lstBoxStudyEntries.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstBoxStudyEntries.FormattingEnabled = true;
-            this.lstBoxStudyEntries.ItemHeight = 19;
+            this.lstBoxStudyEntries.HorizontalScrollbar = true;
+            this.lstBoxStudyEntries.ItemHeight = 18;
             this.lstBoxStudyEntries.Location = new System.Drawing.Point(7, 46);
             this.lstBoxStudyEntries.Name = "lstBoxStudyEntries";
-            this.lstBoxStudyEntries.Size = new System.Drawing.Size(396, 137);
+            this.lstBoxStudyEntries.Size = new System.Drawing.Size(396, 130);
             this.lstBoxStudyEntries.TabIndex = 1;
             // 
             // StudyLogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 471);
+            this.ClientSize = new System.Drawing.Size(426, 496);
             this.Controls.Add(this.grpBoxRead);
             this.Controls.Add(this.grpBoxWrite);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
