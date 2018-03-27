@@ -2,8 +2,8 @@
 //Class: INFO 1200
 //Section: 001
 //Professor: Crandall
-//Date: 20180317
-//Project #: 6A
+//Date: 20180327
+//Project #: 7A
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
@@ -101,6 +101,19 @@ namespace CBMyGradeApp
             QuizTimerForm quizTimer = new QuizTimerForm();
             quizTimer.Show(); // shows the form as a modeless dialog
 
+        }
+
+        /// <summary>
+        /// Opens the study log form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStudyLog_Click(object sender, EventArgs e)
+        {
+            // calls the form’s constructor. Must match the form class name exactly
+            StudyLogForm studyLog = new StudyLogForm();
+
+            studyLog.ShowDialog(); // shows the form as a dialog
         }
     }
 }

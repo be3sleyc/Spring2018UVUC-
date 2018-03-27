@@ -2,8 +2,8 @@
 //Class: INFO 1200
 //Section: 001
 //Professor: Crandall
-//Date: 20180317
-//Project #: 6A
+//Date: 20180327
+//Project #: 7A
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project

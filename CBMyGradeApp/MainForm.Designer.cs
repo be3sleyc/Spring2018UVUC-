@@ -35,6 +35,7 @@
             this.btnScoringMethods = new System.Windows.Forms.Button();
             this.btnLetterGrade = new System.Windows.Forms.Button();
             this.btnQuizTimer = new System.Windows.Forms.Button();
+            this.btnStudyLog = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblName
@@ -118,6 +119,18 @@
             this.btnQuizTimer.UseVisualStyleBackColor = true;
             this.btnQuizTimer.Click += new System.EventHandler(this.btnQuizTimer_Click);
             // 
+            // btnStudyLog
+            // 
+            this.btnStudyLog.AutoSize = true;
+            this.btnStudyLog.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudyLog.Location = new System.Drawing.Point(38, 214);
+            this.btnStudyLog.Name = "btnStudyLog";
+            this.btnStudyLog.Size = new System.Drawing.Size(136, 29);
+            this.btnStudyLog.TabIndex = 4;
+            this.btnStudyLog.Text = "Study Log";
+            this.btnStudyLog.UseVisualStyleBackColor = true;
+            this.btnStudyLog.Click += new System.EventHandler(this.btnStudyLog_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +138,7 @@
             this.ClientSize = new System.Drawing.Size(319, 255);
             this.Controls.Add(this.btnQuizTimer);
             this.Controls.Add(this.btnLetterGrade);
+            this.Controls.Add(this.btnStudyLog);
             this.Controls.Add(this.btnScoringMethods);
             this.Controls.Add(this.btnStudentProfile);
             this.Controls.Add(this.btnClose);
@@ -147,6 +161,7 @@
         private System.Windows.Forms.Button btnScoringMethods;
         private System.Windows.Forms.Button btnLetterGrade;
         private System.Windows.Forms.Button btnQuizTimer;
+        private System.Windows.Forms.Button btnStudyLog;
     }
 }
 
