@@ -118,7 +118,7 @@
             this.txtBoxQuiz2.Location = new System.Drawing.Point(350, 81);
             this.txtBoxQuiz2.Name = "txtBoxQuiz2";
             this.txtBoxQuiz2.Size = new System.Drawing.Size(100, 26);
-            this.txtBoxQuiz2.TabIndex = 4;
+            this.txtBoxQuiz2.TabIndex = 6;
             // 
             // txtBoxQuiz1
             // 
@@ -126,7 +126,7 @@
             this.txtBoxQuiz1.Location = new System.Drawing.Point(350, 48);
             this.txtBoxQuiz1.Name = "txtBoxQuiz1";
             this.txtBoxQuiz1.Size = new System.Drawing.Size(100, 26);
-            this.txtBoxQuiz1.TabIndex = 3;
+            this.txtBoxQuiz1.TabIndex = 5;
             // 
             // txtBoxExam2
             // 
@@ -134,7 +134,7 @@
             this.txtBoxExam2.Location = new System.Drawing.Point(106, 178);
             this.txtBoxExam2.Name = "txtBoxExam2";
             this.txtBoxExam2.Size = new System.Drawing.Size(100, 26);
-            this.txtBoxExam2.TabIndex = 8;
+            this.txtBoxExam2.TabIndex = 4;
             // 
             // txtBoxExam1
             // 
@@ -142,7 +142,7 @@
             this.txtBoxExam1.Location = new System.Drawing.Point(106, 145);
             this.txtBoxExam1.Name = "txtBoxExam1";
             this.txtBoxExam1.Size = new System.Drawing.Size(100, 26);
-            this.txtBoxExam1.TabIndex = 7;
+            this.txtBoxExam1.TabIndex = 3;
             // 
             // txtBoxProject2
             // 
@@ -354,7 +354,7 @@
             this.txtBoxQuiz3.Location = new System.Drawing.Point(350, 114);
             this.txtBoxQuiz3.Name = "txtBoxQuiz3";
             this.txtBoxQuiz3.Size = new System.Drawing.Size(100, 26);
-            this.txtBoxQuiz3.TabIndex = 5;
+            this.txtBoxQuiz3.TabIndex = 7;
             // 
             // label12
             // 
@@ -382,7 +382,7 @@
             this.txtBoxQuiz4.Location = new System.Drawing.Point(350, 144);
             this.txtBoxQuiz4.Name = "txtBoxQuiz4";
             this.txtBoxQuiz4.Size = new System.Drawing.Size(100, 26);
-            this.txtBoxQuiz4.TabIndex = 6;
+            this.txtBoxQuiz4.TabIndex = 8;
             // 
             // label11
             // 

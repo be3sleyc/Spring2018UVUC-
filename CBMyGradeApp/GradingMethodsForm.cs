@@ -57,9 +57,9 @@ namespace CBMyGradeApp
 
             if (ValidateProjects(ref project1Score, ref project2Score, ref project3Score))
             {
-                if (ValidateQuizzes(ref quiz1Score, ref quiz2Score, ref quiz3Score, ref quiz4Score))
+                if (ValidateExams(ref exam1Score, ref exam2Score))
                 {
-                    if (ValidateExams(ref exam1Score, ref exam2Score))
+                    if (ValidateQuizzes(ref quiz1Score, ref quiz2Score, ref quiz3Score, ref quiz4Score))
                     {
                         totalScore = CalculateGrade(project1Score, project2Score, project3Score,
                             quiz1Score, quiz2Score, quiz3Score, quiz4Score,
@@ -96,7 +96,7 @@ namespace CBMyGradeApp
                     else
                     {
                         // Show a message box explaining the error and then clear and refocus on the text box
-                        MessageBox.Show("Invalid score entered for Project 3.\nPlease correct the score for Project 3 to be a positive integer no larger then the maximum score.", "Input Error");
+                        MessageBox.Show($"Invalid score entered for Project 3.\nPlease correct the score for Project 3 to be a positive integer no larger then the maximum score({PROJECT_MAX_SCORE}).", "Input Error");
                         txtBoxProject3.Clear();
                         txtBoxProject3.Focus();
                     }
@@ -104,7 +104,7 @@ namespace CBMyGradeApp
                 else
                 {
                     // Show a message box explaining the error and then clear and refocus on the text box
-                    MessageBox.Show("Invalid score entered for Project 2.\nPlease correct the score for Project 2 to be a positive integer no larger then the maximum score.", "Input Error");
+                    MessageBox.Show($"Invalid score entered for Project 2.\nPlease correct the score for Project 2 to be a positive integer no larger then the maximum score({PROJECT_MAX_SCORE}).", "Input Error");
                     txtBoxProject2.Clear();
                     txtBoxProject2.Focus();
                 }
@@ -112,7 +112,7 @@ namespace CBMyGradeApp
             else
             {
                 // Show a message box explaining the error and then clear and refocus on the text box
-                MessageBox.Show("Invalid score entered for Project 1.\nPlease correct the score for Project 1 to be a positive integer no larger then the maximum score.", "Input Error");
+                MessageBox.Show($"Invalid score entered for Project 1.\nPlease correct the score for Project 1 to be a positive integer no larger then the maximum score({PROJECT_MAX_SCORE}).", "Input Error");
                 txtBoxProject1.Clear();
                 txtBoxProject1.Focus();
             }
@@ -147,7 +147,7 @@ namespace CBMyGradeApp
                         else
                         {
                             // Show a message box explaining the error and then clear and refocus on the text box
-                            MessageBox.Show("Invalid score entered for Quiz 4.\nPlease correct the score for Quiz 4 to be a positive integer no larger then the maximum score.", "Input Error");
+                            MessageBox.Show($"Invalid score entered for Quiz 4.\nPlease correct the score for Quiz 4 to be a positive integer no larger then the maximum score({QUIZ_MAX_SCORE}).", "Input Error");
                             txtBoxQuiz4.Clear();
                             txtBoxQuiz4.Focus();
                         }
@@ -155,7 +155,7 @@ namespace CBMyGradeApp
                     else
                     {
                         // Show a message box explaining the error and then clear and refocus on the text box
-                        MessageBox.Show("Invalid score entered for Quiz 3.\nPlease correct the score for Quiz 3 to be a positive integer no larger then the maximum score.", "Input Error");
+                        MessageBox.Show($"Invalid score entered for Quiz 3.\nPlease correct the score for Quiz 3 to be a positive integer no larger then the maximum score({QUIZ_MAX_SCORE}).", "Input Error");
                         txtBoxQuiz3.Clear();
                         txtBoxQuiz3.Focus();
                     }
@@ -163,7 +163,7 @@ namespace CBMyGradeApp
                 else
                 {
                     // Show a message box explaining the error and then clear and refocus on the text box
-                    MessageBox.Show("Invalid score entered for Quiz 2.\nPlease correct the score for Quiz 2 to be a positive integer no larger then the maximum score.", "Input Error");
+                    MessageBox.Show($"Invalid score entered for Quiz 2.\nPlease correct the score for Quiz 2 to be a positive integer no larger then the maximum score({QUIZ_MAX_SCORE}).", "Input Error");
                     txtBoxQuiz2.Clear();
                     txtBoxQuiz2.Focus();
                 }
@@ -171,7 +171,7 @@ namespace CBMyGradeApp
             else
             {
                 // Show a message box explaining the error and then clear and refocus on the text box
-                MessageBox.Show("Invalid score entered for Quiz 1.\nPlease correct the score for Quiz 1 to be a positive integer no larger then the maximum score.", "Input Error");
+                MessageBox.Show($"Invalid score entered for Quiz 1.\nPlease correct the score for Quiz 1 to be a positive integer no larger then the maximum score.({QUIZ_MAX_SCORE})", "Input Error");
                 txtBoxQuiz1.Clear();
                 txtBoxQuiz1.Focus();
             }
@@ -199,7 +199,7 @@ namespace CBMyGradeApp
                 else
                 {
                     // Show a message box explaining the error and then clear and refocus on the text box
-                    MessageBox.Show("Invalid score entered for Exam 2.\nPlease correct the score for Exam 2 to be a positive integer no larger then the maximum score.", "Input Error");
+                    MessageBox.Show($"Invalid score entered for Exam 2.\nPlease correct the score for Exam 2 to be a positive integer no larger then the maximum score({EXAM_MAX_SCORE}).", "Input Error");
                     txtBoxExam2.Clear();
                     txtBoxExam2.Focus();
                 }
@@ -207,7 +207,7 @@ namespace CBMyGradeApp
             else
             {
                 // Show a message box explaining the error and then clear and refocus on the text box
-                MessageBox.Show("Invalid score entered for Exam 1.\nPlease correct the score for Exam 1 to be a positive integer no larger then the maximum score.", "Input Error");
+                MessageBox.Show($"Invalid score entered for Exam 1.\nPlease correct the score for Exam 1 to be a positive integer no larger then the maximum score({EXAM_MAX_SCORE}).", "Input Error");
                 txtBoxExam1.Clear();
                 txtBoxExam1.Focus();
             }
@@ -235,14 +235,14 @@ namespace CBMyGradeApp
             double grade;
 
             // create in variable to count the total quantity of each assignment
-            int totalProjects = 3;
-            int totalQuizzes = 4;
-            int totalExams = 2;
+            double totalProjects = 3.0;
+            double totalQuizzes = 4.0;
+            double totalExams = 2.0;
 
             // get the categorical averages 
-            projectsCat = ((project1 + project2 + project3) / (PROJECT_MAX_SCORE * totalProjects)) / totalProjects;
-            quizzesCat = ((quiz1 + quiz2 + quiz3 + quiz4) / (QUIZ_MAX_SCORE * totalQuizzes)) / totalQuizzes;
-            examsCat = ((exam1 + exam2) / (EXAM_MAX_SCORE * totalExams)) / totalExams;
+            projectsCat = (project1 / PROJECT_MAX_SCORE + project2 / PROJECT_MAX_SCORE + project3 / PROJECT_MAX_SCORE) / totalProjects;
+            quizzesCat = (quiz1 / QUIZ_MAX_SCORE + quiz2 / QUIZ_MAX_SCORE + quiz3 / QUIZ_MAX_SCORE + quiz4 / QUIZ_MAX_SCORE) / totalQuizzes;
+            examsCat = (exam1 / EXAM_MAX_SCORE + exam2 / EXAM_MAX_SCORE) / totalExams;
 
             // calculate the total grade by summing the multiplication of the categorical averages with their weights
             grade = projectsCat * PROJECT_PERCENT + quizzesCat * QUIZ_PERCENT + examsCat * EXAM_PERCENT;
