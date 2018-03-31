@@ -68,7 +68,7 @@
             this.btnClose.Location = new System.Drawing.Point(225, 255);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 29);
-            this.btnClose.TabIndex = 5;
+            this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -92,7 +92,7 @@
             this.btnScoringMethods.Location = new System.Drawing.Point(38, 155);
             this.btnScoringMethods.Name = "btnScoringMethods";
             this.btnScoringMethods.Size = new System.Drawing.Size(136, 29);
-            this.btnScoringMethods.TabIndex = 4;
+            this.btnScoringMethods.TabIndex = 3;
             this.btnScoringMethods.Text = "Scoring Methods";
             this.btnScoringMethods.UseVisualStyleBackColor = true;
             this.btnScoringMethods.Click += new System.EventHandler(this.btnScoringMethods_Click);
@@ -104,7 +104,7 @@
             this.btnLetterGrade.Location = new System.Drawing.Point(194, 102);
             this.btnLetterGrade.Name = "btnLetterGrade";
             this.btnLetterGrade.Size = new System.Drawing.Size(106, 29);
-            this.btnLetterGrade.TabIndex = 3;
+            this.btnLetterGrade.TabIndex = 2;
             this.btnLetterGrade.Text = "Letter Grade";
             this.btnLetterGrade.UseVisualStyleBackColor = true;
             this.btnLetterGrade.Click += new System.EventHandler(this.btnLetterGrade_Click);
@@ -115,7 +115,7 @@
             this.btnQuizTimer.Location = new System.Drawing.Point(181, 155);
             this.btnQuizTimer.Name = "btnQuizTimer";
             this.btnQuizTimer.Size = new System.Drawing.Size(119, 29);
-            this.btnQuizTimer.TabIndex = 2;
+            this.btnQuizTimer.TabIndex = 4;
             this.btnQuizTimer.Text = "Quiz Timer";
             this.btnQuizTimer.UseVisualStyleBackColor = true;
             this.btnQuizTimer.Click += new System.EventHandler(this.btnQuizTimer_Click);
@@ -127,7 +127,7 @@
             this.btnStudyLog.Location = new System.Drawing.Point(38, 208);
             this.btnStudyLog.Name = "btnStudyLog";
             this.btnStudyLog.Size = new System.Drawing.Size(96, 29);
-            this.btnStudyLog.TabIndex = 4;
+            this.btnStudyLog.TabIndex = 5;
             this.btnStudyLog.Text = "Study Log";
             this.btnStudyLog.UseVisualStyleBackColor = true;
             this.btnStudyLog.Click += new System.EventHandler(this.btnStudyLog_Click);
