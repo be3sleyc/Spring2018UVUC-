@@ -36,6 +36,7 @@
             this.btnLetterGrade = new System.Windows.Forms.Button();
             this.btnQuizTimer = new System.Windows.Forms.Button();
             this.btnStudyLog = new System.Windows.Forms.Button();
+            this.btnGradingMethods = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblName
@@ -64,7 +65,7 @@
             // 
             this.btnClose.AutoSize = true;
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(211, 214);
+            this.btnClose.Location = new System.Drawing.Point(225, 255);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 29);
             this.btnClose.TabIndex = 5;
@@ -76,7 +77,7 @@
             // 
             this.btnStudentProfile.AutoSize = true;
             this.btnStudentProfile.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudentProfile.Location = new System.Drawing.Point(38, 106);
+            this.btnStudentProfile.Location = new System.Drawing.Point(38, 102);
             this.btnStudentProfile.Name = "btnStudentProfile";
             this.btnStudentProfile.Size = new System.Drawing.Size(123, 29);
             this.btnStudentProfile.TabIndex = 1;
@@ -88,7 +89,7 @@
             // 
             this.btnScoringMethods.AutoSize = true;
             this.btnScoringMethods.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScoringMethods.Location = new System.Drawing.Point(150, 165);
+            this.btnScoringMethods.Location = new System.Drawing.Point(38, 155);
             this.btnScoringMethods.Name = "btnScoringMethods";
             this.btnScoringMethods.Size = new System.Drawing.Size(136, 29);
             this.btnScoringMethods.TabIndex = 4;
@@ -100,7 +101,7 @@
             // 
             this.btnLetterGrade.AutoSize = true;
             this.btnLetterGrade.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLetterGrade.Location = new System.Drawing.Point(38, 165);
+            this.btnLetterGrade.Location = new System.Drawing.Point(194, 102);
             this.btnLetterGrade.Name = "btnLetterGrade";
             this.btnLetterGrade.Size = new System.Drawing.Size(106, 29);
             this.btnLetterGrade.TabIndex = 3;
@@ -111,7 +112,7 @@
             // btnQuizTimer
             // 
             this.btnQuizTimer.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuizTimer.Location = new System.Drawing.Point(167, 106);
+            this.btnQuizTimer.Location = new System.Drawing.Point(181, 155);
             this.btnQuizTimer.Name = "btnQuizTimer";
             this.btnQuizTimer.Size = new System.Drawing.Size(119, 29);
             this.btnQuizTimer.TabIndex = 2;
@@ -123,19 +124,31 @@
             // 
             this.btnStudyLog.AutoSize = true;
             this.btnStudyLog.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudyLog.Location = new System.Drawing.Point(38, 214);
+            this.btnStudyLog.Location = new System.Drawing.Point(38, 208);
             this.btnStudyLog.Name = "btnStudyLog";
-            this.btnStudyLog.Size = new System.Drawing.Size(136, 29);
+            this.btnStudyLog.Size = new System.Drawing.Size(96, 29);
             this.btnStudyLog.TabIndex = 4;
             this.btnStudyLog.Text = "Study Log";
             this.btnStudyLog.UseVisualStyleBackColor = true;
             this.btnStudyLog.Click += new System.EventHandler(this.btnStudyLog_Click);
             // 
+            // btnGradingMethods
+            // 
+            this.btnGradingMethods.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.btnGradingMethods.Location = new System.Drawing.Point(158, 208);
+            this.btnGradingMethods.Name = "btnGradingMethods";
+            this.btnGradingMethods.Size = new System.Drawing.Size(142, 29);
+            this.btnGradingMethods.TabIndex = 6;
+            this.btnGradingMethods.Text = "Grading Methods";
+            this.btnGradingMethods.UseVisualStyleBackColor = true;
+            this.btnGradingMethods.Click += new System.EventHandler(this.btnGradingMethods_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 255);
+            this.ClientSize = new System.Drawing.Size(325, 304);
+            this.Controls.Add(this.btnGradingMethods);
             this.Controls.Add(this.btnQuizTimer);
             this.Controls.Add(this.btnLetterGrade);
             this.Controls.Add(this.btnStudyLog);
@@ -162,6 +175,7 @@
         private System.Windows.Forms.Button btnLetterGrade;
         private System.Windows.Forms.Button btnQuizTimer;
         private System.Windows.Forms.Button btnStudyLog;
+        private System.Windows.Forms.Button btnGradingMethods;
     }
 }
 

@@ -2,8 +2,8 @@
 //Class: INFO 1200
 //Section: 001
 //Professor: Crandall
-//Date: 20180327
-//Project #: 7A
+//Date: 20180330
+//Project #: 8A
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
@@ -114,6 +114,20 @@ namespace CBMyGradeApp
             StudyLogForm studyLog = new StudyLogForm();
 
             studyLog.ShowDialog(); // shows the form as a dialog
+        }
+
+        /// <summary>
+        /// Opens the Grading Methods form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnGradingMethods_Click(object sender, EventArgs e)
+        {
+            // call the form’s constructor. 
+            // remember: must match the form class name exactly
+            GradingMethodsForm gradingMethods = new GradingMethodsForm();
+            
+            gradingMethods.ShowDialog(); //  shows the form as a dialog
         }
     }
 }

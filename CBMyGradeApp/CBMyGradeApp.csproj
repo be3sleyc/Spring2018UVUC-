@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GradingMethodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradingMethodsForm.Designer.cs">
+      <DependentUpon>GradingMethodsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LetterGradeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="StudyLogForm.Designer.cs">
       <DependentUpon>StudyLogForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GradingMethodsForm.resx">
+      <DependentUpon>GradingMethodsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LetterGradeForm.resx">
       <DependentUpon>LetterGradeForm.cs</DependentUpon>
     </EmbeddedResource>
