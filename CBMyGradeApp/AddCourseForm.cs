@@ -91,7 +91,7 @@ namespace CBMyGradeApp
                     else
                     {
                         // show an error message for Instructor input
-                        MessageBox.Show("Please provide an instructor name for the course.","Invalid Input");
+                        MessageBox.Show("Please provide an valid instructor name for the course.","Invalid Input");
                         txtBoxInstructor.Clear(); // clear the erroneous content
                         txtBoxInstructor.Focus(); // refocus on the erroneous control
                         return false;
@@ -100,7 +100,7 @@ namespace CBMyGradeApp
                 else
                 {
                     // show an error message for Semester input
-                    MessageBox.Show("Please provide a semester for the course.", "Invalid Input");
+                    MessageBox.Show("Please provide a valid semester for the course.", "Invalid Input");
                     txtBoxSemester.Clear(); // clear the erroneous content
                     txtBoxSemester.Focus(); // refocus on the erroneous control
                     return false;
@@ -109,7 +109,7 @@ namespace CBMyGradeApp
             else
             {
                 // show an error message for Course Name input
-                MessageBox.Show("Please provide a name for the course.","Invalid Input");
+                MessageBox.Show("Please provide a valid name for the course.","Invalid Input");
                 txtBoxCourseName.Clear(); // clear the erroneous content
                 txtBoxCourseName.Focus(); // refocus on the erroneous control
                 return false;
