@@ -2,8 +2,8 @@
 //Class: INFO 1200
 //Section: 001
 //Professor: Crandall
-//Date: 20180330
-//Project #: 8A
+//Date: 20180406
+//Project #: 9A
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
@@ -32,13 +32,30 @@ namespace CBMyGradeApp
         private const double QUIZ_PERCENT = .25;
         private const double EXAM_PERCENT = .30;
 
+        // create backing fields for the numerical and letter grade
+        private double _grade;
+        private string _letter;
+
         public GradingMethodsForm()
         {
             InitializeComponent();
         }
 
+        // create properies with read(get) and write(set) methods for the backing fields
+        public double Grade
+        {
+            get { return _grade; }
+            set { _grade = value; }
+        }
+
+        public string Letter
+        {
+            get { return _letter; }
+            set { _letter = value; }
+        }
+
         /// <summary>
-        /// 
+        /// Validates user input and calculates a numerical and letter grade
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -55,19 +72,25 @@ namespace CBMyGradeApp
             // create string variable for letter grade
             string letterGrade;
 
+            // validate all the assignment scores and calculate a total score and letter grade
             if (ValidateProjects(ref project1Score, ref project2Score, ref project3Score))
             {
                 if (ValidateExams(ref exam1Score, ref exam2Score))
                 {
                     if (ValidateQuizzes(ref quiz1Score, ref quiz2Score, ref quiz3Score, ref quiz4Score))
                     {
+                        // calculate the total score
                         totalScore = CalculateGrade(project1Score, project2Score, project3Score,
                             quiz1Score, quiz2Score, quiz3Score, quiz4Score,
                             exam1Score, exam2Score);
 
+                        // convert the total score to a letter grade
                         letterGrade = LetterGrade(totalScore);
 
-                        GradeReport(totalScore, letterGrade);
+                        this.Grade = totalScore;  // set this form’s Grade property
+                        this.Letter = letterGrade;  // set this form’s Letter property
+                        this.Close();  // close this form
+
                     }
                 }
             }
@@ -277,52 +300,6 @@ namespace CBMyGradeApp
 
             // return the letter grade
             return letterGrade;
-        }
-
-        /// <summary>
-        /// Displays the numeric and letter grade in the grade report label
-        /// </summary>
-        /// <param name="finalGrade"></param>
-        /// <param name="letterGrade"></param>
-        private void GradeReport(double finalGrade, string letterGrade)
-        {
-            lblGradeReport.Text = $"Your grade is {finalGrade.ToString("p2")} with a {letterGrade} letter grade.";
-        }
-
-        /// <summary>
-        /// clears all the assignment text boxes and grade report, then refocuses on assignment 1
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            // clear all the assignment text boxes
-            txtBoxProject1.Clear();
-            txtBoxProject2.Clear();
-            txtBoxProject3.Clear();
-            txtBoxQuiz1.Clear();
-            txtBoxQuiz2.Clear();
-            txtBoxQuiz3.Clear();
-            txtBoxQuiz4.Clear();
-            txtBoxExam1.Clear();
-            txtBoxExam2.Clear();
-
-            // clear the grade report label
-            lblGradeReport.Text = ""; 
-
-            // refocus on the first assignment
-            txtBoxProject1.Focus();
-        }
-
-        /// <summary>
-        /// closes the form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            // close the form
-            this.Close();
         }
     }
 }

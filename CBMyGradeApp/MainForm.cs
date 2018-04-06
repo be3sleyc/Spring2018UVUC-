@@ -2,8 +2,8 @@
 //Class: INFO 1200
 //Section: 001
 //Professor: Crandall
-//Date: 20180330
-//Project #: 8A
+//Date: 20180406
+//Project #: 9A
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
@@ -36,7 +36,7 @@ namespace CBMyGradeApp
         private void btnWelcome_Click(object sender, EventArgs e)
         {
             // summon messagebox and display a welcome message
-            MessageBox.Show("Welcome to Project 5.A!", "Welcome!");
+            MessageBox.Show("Welcome to Project 9.A!", "Welcome!");
         }
 
         /// <summary>
@@ -128,6 +128,17 @@ namespace CBMyGradeApp
             GradingMethodsForm gradingMethods = new GradingMethodsForm();
             
             gradingMethods.ShowDialog(); //  shows the form as a dialog
+        }
+
+        private void btnAddCourse_Click(object sender, EventArgs e)
+        {
+            // calls the form’s constructor. 
+            // must match the form class name exactly
+            AddCourseForm addCourse = new AddCourseForm();
+            
+            addCourse.ShowDialog(); //  shows the form as a dialog
+
+
         }
     }
 }
