@@ -38,6 +38,7 @@
             this.btnStudyLog = new System.Windows.Forms.Button();
             this.btnGradingMethods = new System.Windows.Forms.Button();
             this.btnAddCourse = new System.Windows.Forms.Button();
+            this.btnGPAForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblName
@@ -66,7 +67,7 @@
             // 
             this.btnClose.AutoSize = true;
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(178, 201);
+            this.btnClose.Location = new System.Drawing.Point(348, 201);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 29);
             this.btnClose.TabIndex = 8;
@@ -155,11 +156,23 @@
             this.btnAddCourse.UseVisualStyleBackColor = true;
             this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
             // 
+            // btnGPAForm
+            // 
+            this.btnGPAForm.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.btnGPAForm.Location = new System.Drawing.Point(178, 201);
+            this.btnGPAForm.Name = "btnGPAForm";
+            this.btnGPAForm.Size = new System.Drawing.Size(110, 29);
+            this.btnGPAForm.TabIndex = 9;
+            this.btnGPAForm.Text = "My GPA";
+            this.btnGPAForm.UseVisualStyleBackColor = true;
+            this.btnGPAForm.Click += new System.EventHandler(this.btnGPAForm_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 243);
+            this.ClientSize = new System.Drawing.Size(435, 243);
+            this.Controls.Add(this.btnGPAForm);
             this.Controls.Add(this.btnAddCourse);
             this.Controls.Add(this.btnGradingMethods);
             this.Controls.Add(this.btnQuizTimer);
@@ -190,6 +203,7 @@
         private System.Windows.Forms.Button btnStudyLog;
         private System.Windows.Forms.Button btnGradingMethods;
         private System.Windows.Forms.Button btnAddCourse;
+        private System.Windows.Forms.Button btnGPAForm;
     }
 }
 

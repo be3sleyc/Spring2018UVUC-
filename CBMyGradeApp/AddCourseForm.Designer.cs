@@ -44,7 +44,7 @@
             // btnAddCourse
             // 
             this.btnAddCourse.Location = new System.Drawing.Point(58, 150);
-            this.btnAddCourse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddCourse.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(247, 34);
             this.btnAddCourse.TabIndex = 3;
@@ -55,7 +55,7 @@
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(125, 314);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(112, 34);
             this.btnClose.TabIndex = 4;
@@ -159,9 +159,10 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddCourse);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddCourseForm";
             this.Text = "Add a Course";
+            this.Load += new System.EventHandler(this.AddCourseForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

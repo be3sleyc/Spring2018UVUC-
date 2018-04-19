@@ -52,6 +52,12 @@
       <DependentUpon>AddCourseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Course.cs" />
+    <Compile Include="GPAForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPAForm.Designer.cs">
+      <DependentUpon>GPAForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GradingMethodsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="AddCourseForm.resx">
       <DependentUpon>AddCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPAForm.resx">
+      <DependentUpon>GPAForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GradingMethodsForm.resx">
       <DependentUpon>GradingMethodsForm.cs</DependentUpon>

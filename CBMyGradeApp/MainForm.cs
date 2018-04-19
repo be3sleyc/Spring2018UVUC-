@@ -2,8 +2,8 @@
 //Class: INFO 1200
 //Section: 001
 //Professor: Crandall
-//Date: 20180406
-//Project #: 9A
+//Date: 20180421
+//Project #: 10A
 //I declare that the source code contained in this assignment was written solely by me.
 //I understand that copying any source code, in whole or in part,
 // constitutes cheating, and that I will receive a zero on this project
@@ -130,6 +130,11 @@ namespace CBMyGradeApp
             gradingMethods.ShowDialog(); //  shows the form as a dialog
         }
 
+        /// <summary>
+        /// Opens the Add Courses Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
             // calls the form’s constructor. 
@@ -138,6 +143,21 @@ namespace CBMyGradeApp
             
             addCourse.ShowDialog(); //  shows the form as a dialog
 
+
+        }
+
+        /// <summary>
+        /// Opens the GPA Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnGPAForm_Click(object sender, EventArgs e)
+        {
+            // calls the form’s constructor. 
+            // must match the form class name exactly
+            GPAForm gpa = new GPAForm();
+            
+            gpa.ShowDialog(); //  shows the form as a dialog
 
         }
     }
