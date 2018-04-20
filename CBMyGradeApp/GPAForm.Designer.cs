@@ -30,7 +30,7 @@
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblGPA = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnClose
@@ -55,24 +55,24 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "My Current GPA is:";
             // 
-            // label2
+            // lblGPA
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label2.Location = new System.Drawing.Point(206, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "0.00";
+            this.lblGPA.AutoSize = true;
+            this.lblGPA.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblGPA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblGPA.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.lblGPA.Location = new System.Drawing.Point(206, 40);
+            this.lblGPA.Name = "lblGPA";
+            this.lblGPA.Size = new System.Drawing.Size(43, 21);
+            this.lblGPA.TabIndex = 2;
+            this.lblGPA.Text = "0.00";
             // 
             // GPAForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 145);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblGPA);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.Name = "GPAForm";
@@ -87,6 +87,6 @@
 
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblGPA;
     }
 }

@@ -49,7 +49,41 @@ namespace CBMyGradeApp
         /// <param name="e"></param>
         private void GPAForm_Load(object sender, EventArgs e)
         {
+            // create variables to hold the total courses count and the gpa
+            int count = 0;
+            double gpa;
 
+            // create a stream reader object to read through the courses
+            StreamReader courseReader;
+
+            // prepare to catch any file operation errors
+            try
+            {
+                // open the courses file to read
+                courseReader = File.OpenText(currentFileName);
+
+                // until the end of file is reached
+                while(!courseReader.EndOfStream)
+                {
+                    // populate the letterGrades array using the SetLetterGrade method
+                    SetLetterGrade(courseReader.ReadLine(), count);
+
+                    // increment the count
+                    count++;
+                }
+
+                // close the courses file
+                courseReader.Close();
+
+                // calculate the GPA and post it to the GPA label
+                lblGPA.Text = CalculateGPA(count).ToString("F2");
+            }
+            catch (Exception)
+            {
+                // display an error Message
+                MessageBox.Show("Could not read from file.\nPlease ensure you have the correct permissions and the file contains data before continuing.","File Error");
+            }
+            
         }
 
         /// <summary>
@@ -67,13 +101,49 @@ namespace CBMyGradeApp
         }
 
         /// <summary>
-        /// 
+        /// uses count and the sum of grades in letterGrades to get the total GPA
+        /// </summary>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        public double CalculateGPA(int count)
+        {
+            // declare a variable to hold the gpa
+            double gpa = 0.0;
+
+            // for each letter grade in the letter grades array
+            foreach (string  grade in letterGrades)
+            {
+                // associate the letter grade with a point value and sum them together
+                gpa += grade == "A" ? 4.0 : 
+                    grade == "A-" ? 3.7 :      //			A  	4.0	A- 	3.7
+                    grade == "B+" ? 3.3 :      //B+	3.3	B	3.0	B-	2.7
+                    grade == "B" ? 3.0 :       //C+	2.3	C	2.0	C-	1.7
+                    grade == "B-" ? 2.7 :      //D+	1.3	D	1.0	D-	0.7
+                    grade == "C+" ? 2.3 :      //E     0
+                    grade == "C" ? 2.0 :
+                    grade == "C-" ? 1.7 :
+                    grade == "D+" ? 1.3 :
+                    grade == "D" ? 1.0 :
+                    grade == "D-" ? 0.7 :
+                    0.0;
+            }
+
+            // divide gpa (the grade point total) by the count to get the grade point average
+            gpa /= count;
+
+            // return the gpa
+            return gpa;
+        }
+
+        /// <summary>
+        /// closes the form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnClose_Click(object sender, EventArgs e)
         {
-
+            // close the form
+            this.Close();
         }
     }
 }

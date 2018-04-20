@@ -66,11 +66,12 @@
             // btnClose
             // 
             this.btnClose.AutoSize = true;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(348, 201);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 29);
-            this.btnClose.TabIndex = 8;
+            this.btnClose.TabIndex = 9;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -162,7 +163,7 @@
             this.btnGPAForm.Location = new System.Drawing.Point(178, 201);
             this.btnGPAForm.Name = "btnGPAForm";
             this.btnGPAForm.Size = new System.Drawing.Size(110, 29);
-            this.btnGPAForm.TabIndex = 9;
+            this.btnGPAForm.TabIndex = 8;
             this.btnGPAForm.Text = "My GPA";
             this.btnGPAForm.UseVisualStyleBackColor = true;
             this.btnGPAForm.Click += new System.EventHandler(this.btnGPAForm_Click);
@@ -171,6 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(435, 243);
             this.Controls.Add(this.btnGPAForm);
             this.Controls.Add(this.btnAddCourse);

@@ -69,7 +69,7 @@ namespace CBMyGradeApp
             catch (Exception)
             {
                 // display an error message
-                MessageBox.Show("File Error!", "No course information found in course file.\nPlease record some course information.");
+                MessageBox.Show("No course information found in course file.\nPlease record some course information.", "File Error!");
             }
         }
 
@@ -190,7 +190,7 @@ namespace CBMyGradeApp
             catch (Exception)
             {
                 // display an error message
-                MessageBox.Show("File Error!", $"Could not write course information to {currentFileName}.\nEnsure you have the proper permissions and then resume.");
+                MessageBox.Show($"Could not write course information to {currentFileName}.\nEnsure you have the proper permissions and then resume.", "File Error!");
             }
 
             // close the form

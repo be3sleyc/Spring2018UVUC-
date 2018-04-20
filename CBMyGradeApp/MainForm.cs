@@ -36,7 +36,7 @@ namespace CBMyGradeApp
         private void btnWelcome_Click(object sender, EventArgs e)
         {
             // summon messagebox and display a welcome message
-            MessageBox.Show("Welcome to Project 9.A!", "Welcome!");
+            MessageBox.Show("Welcome to Project 10.A!", "Welcome!");
         }
 
         /// <summary>
